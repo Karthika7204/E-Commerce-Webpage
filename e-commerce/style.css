@@ -1,0 +1,233 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;  /*from google font*/
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; /*Box shadow from awesome font*/
+}
+
+.navbar-links{
+    display:flex;         /*to allign it in single line*/
+    column-gap: 20px;
+}
+
+.navbar-link a{
+    text-decoration: none;
+    color:#1D232C;
+}
+
+.navbar-link a:hover{
+    text-decoration: underline;
+    color:#1D232C;
+}
+
+.navbar-menu-toggle{
+    display:none;            /*initially in the desktop page with no menu toggle*/
+}
+
+.navbar-menu-toggle i:hover{
+    color:grey;
+}
+
+/*Side navbar*/
+.side-navbar{
+    background-color:#1D232C;
+    width:50%;
+    height: 100%;            
+    position: fixed;        /*always the sidenavbar position is fixed*/
+    top:0;
+    left:-60%;              /*to hide the sidenavbar for make animation */
+    padding:20px;
+    color:white;
+    transition: 1s;
+}
+
+.side-navbar-link{
+    margin-bottom: 30px;
+}
+
+.side-navbar-links a{
+    text-decoration: none;
+    color:white;
+}
+
+.side-navbar-links a:hover{
+    text-decoration: underline;
+}
+
+.x-bar i:hover{
+    color: #727375;
+}
+ 
+/*Header style*/
+.header{
+    display:flex;
+    justify-content: center;
+    column-gap: 50px;
+    padding:50px;
+    margin-top: 40px;
+}
+
+.header-button{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    background-color: #1D232C;
+    color:white;
+    cursor: pointer;
+}
+
+/*service*/
+/*service-container1*/
+.service{
+    padding: 20px;
+}
+.service-container-1{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-container-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.service-container-2 div{
+    background-color: #F4F4F7;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/*new arrival*/
+.new-arrival{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;          /*to adjust the image correspondin to the screen size*/
+}
+
+.new-arrival-container {
+    position: relative;         /* Ensure the container is a positioned parent for absolute positioning */
+}
+
+.new-arrival-container button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);           /* Center the button horizontally and vertically */
+    padding: 8px 20px;                          /* Adjust padding as needed */
+    background-color: #ffffff;                /* Button background color */
+    color: #1D232C;                            /* Button text color */
+    border: none;                               /* Remove button border if needed */
+    border-radius: 10px;                        /*border curve*/
+    cursor: pointer;                             /* Change cursor to pointer on hover */
+}
+
+/*News*/
+.news{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.news input{
+    padding:11px;
+    width: 80vw;
+    margin-bottom: 10px;
+    border: solid 3px;
+}
+
+.news button{
+    margin-top: 20px;
+    color:#F2F4F7;
+    background-color: #1D232C;
+    border-radius: 10px;
+    padding:10px;
+}
+
+/*footer*/
+
+.footer{
+    margin-top: 20px;
+    padding:40px;
+    background-color: #1D232C;
+    color:white;
+}
+
+/*colletion page*/
+
+/*product-section*/
+.product-section{
+    margin-top: 20px;
+}
+
+.product-search{
+    width:80%;
+    border:solid black 2px;
+    border-radius: 20px;
+    display:flex;
+    justify-content: space-between; /*to seperate the search symbol and text*/
+    align-items: center;
+    padding: 10px;
+    margin:auto;
+}
+
+.product-search input{
+    border:none;
+    background-color: transparent;
+    width:100%;
+}
+
+.product-search input:focus{
+    outline:none;
+}
+
+.products{
+    padding:20px;
+    display:flex;
+    gap:10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.products-box{
+    text-align: center;
+    flex-basis: 20%;  /*to fit only 4 img in desktop screen*/
+}
+
+/*media query */
+@media screen and (max-width:700px) {
+    .navbar-menu-toggle{
+        display:block;      /*enable the side navbar for below 700px screen*/
+    }
+    .navbar-links{
+        display:none;      /*disable the navbar link in below 700px */
+    }
+    .header-image{
+        display:none;
+    }
+    .service-container-1-para{
+        display:none;
+    }
+    .service-container-2{
+        flex-direction: column;
+    }
+
+}
